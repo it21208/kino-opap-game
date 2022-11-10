@@ -281,7 +281,7 @@ def main(Draw) -> str:
             "date": str(opts.date),
             "pages": pages,
             "num_payouts": len(payouts),
-            "mean_payout": sum(payouts) / +len(payouts) if payouts else None,
+            "mean_payout": sum(payouts) / len(payouts) if payouts else None,
         }
     else:    
         result = {
