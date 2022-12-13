@@ -1,4 +1,4 @@
-# Backend coding challenge
+# Kino OPAP game
 
 The goal of this coding challenge is to enhance and extend a simple Python script that computes player payouts for the game of [KINO](https://www.opap.gr/en/how-to-play-kino).
 
