@@ -1,4 +1,4 @@
-# Earth Science Analytics - Backend coding challenge
+# Backend coding challenge
 
 The goal of this coding challenge is to enhance and extend a simple Python script that computes player payouts for the game of [KINO](https://www.opap.gr/en/how-to-play-kino).
 
@@ -48,15 +48,7 @@ Sample run limited to the first 2 pages (=20 draws) of the same date:
 	{"selected_numbers": [5, 12, 19, 39, 62, 74, 78], "date": "2020-06-25", "pages": [1, 2], "num_payouts": 20, "mean_payout": 0.45}
 
 
-## Tasks
-
-### 1. Refactoring
-
-Currently `kino.py` is written as a monolithic script: it parses the command line arguments, fetches the winning numbers, computes the payouts and prints the results, all in global scope.
-
-Refactor it so that it becomes easier to test, extend and maintain.
-
-### 2a. KINO Bonus
+### KINO Bonus
 
 Extend the payout calculator with the [KINO BONUS](https://www.opap.gr/en/meet-kino-bonus) option:
 
@@ -73,8 +65,7 @@ Sample run limited to the first 2 pages (=20 draws) of the same date:
 	$ python kino.py --bonus --page 1 2 --date=2020-06-25 5 12 19 39 62 74 78
 	{"selected_numbers": [5, 12, 19, 39, 62, 74, 78], "bonus": true, "date": "2020-06-25", "pages": [1, 2], "num_payouts": 20, "mean_payout": 0.6}
 
-
-### 2b. Caching
+### Caching
 
 Implement a caching mechanism that can be used for saving and loading the winning numbers from the local disk instead of the network.
 
@@ -86,16 +77,9 @@ What file(s) are written under `DIR`, in what format and any other implementatio
 
 _Tip: You may find [joblib.Memory](https://joblib.readthedocs.io/en/latest/memory.html) convenient for this task._
 
-### 2c. Optimization
+### Optimization
 
 The payout computation is executed sequentially, one draw at a time. Try to reduce the overall computation time by:
 
 - either parallelization using [multiprocessing](https://docs.python.org/3/library/multiprocessing.html),
 - or [vectorized operations](https://realpython.com/numpy-array-programming/) using [NumPy](https://numpy.org/) (or/and [Pandas](https://pandas.pydata.org/)).
-
-## Submission Guidelines
-
-- Create a separate git branch for each task you work on and open separate pull request(s).
-- Your code should run on Python >= 3.6.
-- You may use any external Python packages as dependencies; just make sure you add them to `requirements.txt`.
-- Use [black](https://github.com/psf/black) to format your code.
